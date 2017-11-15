@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.2.0 - 2017-11-15
+
+### Features
+
+- Add the progress and status to the window title.
+- Add a sudo-prompt upon launch on Linux-based systems.
+- Add optional progress bars to drive-selector drives.
+- Increase the flashing speed of usbboot discovered devices.
+- Add eye candy to usbboot initialized devices.
+- Integrate Raspberry Pi's usbboot technology.
+
+### Fixes
+
+- Remove Linux elevation meant for usbboot.
+- Fix `LIBUSB_ERROR_NO_DEVICE` error at the end of usbboot.
+- Gracefully handle scenarios where a USB drive is disconnected halfway through the usbboot procedure.
+- Make sure the progress button is always rounded.
+
+### Misc
+
+- Add the Python version (2.7) to the CONTRIBUTING doc.
+- Remove duplicate debug enabling in usbboot module.
+- Update Electron to v1.7.9
+- Fix permission denied issues when XDG_RUNTIME_DIR is mounted with the `noexec` option.
+- Fix Etcher being unable to read certain zip files
+- Retry ejection various times before giving up on Windows.
+- Try to use `$XDG_RUNTIME_DIR` to extract temporary scripts on GNU/Linux.
+- Fix "Couldn't scan the drives: An unknown error occurred" error when there is a drive locked with BitLocker.
+
 ## v1.1.2 - 2017-08-07
 
 ### Features
